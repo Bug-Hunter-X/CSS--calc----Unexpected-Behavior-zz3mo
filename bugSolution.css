@@ -1,0 +1,25 @@
+/* Solution: Correcting calc() usage */
+
+/* Instead of relying on an undefined parent width, set a specific width or use a more robust approach */
+.container {
+  width: 80%; /* Or a fixed pixel width */
+  margin: 0 auto;
+}
+
+.element {
+  width: calc(100% - 20px); /* Correct unit usage */
+  background-color: lightblue;
+}
+
+/* Avoid overly nested calc() expressions. Break them down for better readability and maintainability. */
+.nested {
+  width: 50%; /* Define initial width */
+  height: calc(50% + 20px); /* Calculation for height. */
+}
+
+/* Always ensure units are consistent. */
+.consistent {
+  width: calc(100% - 50px); /* Ensure consistent use of px */
+  height: calc(100px + 20%);/* Combining different units. */
+}
+/*Ensure units are consistent and properly used. Using the same type of unit (px or % or rem etc.) across the calculations will avoid unexpected results*/
